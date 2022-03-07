@@ -1,0 +1,393 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  :focus {
+    outline: none;
+  }
+}
+
+// ==== fonts ====
+@font-face {
+  font-family: "CorporateA-Regular";
+  src: url("../fonts/CorporateA-Regular.otf");
+}
+
+@font-face {
+  font-family: "CorporateS-Regular";
+  src: url("../fonts/CorporateS-Regular.otf");
+}
+
+@font-face {
+  font-family: "CorporateS-lite";
+  src: url("../fonts/Corporate-Regular-lite.otf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $backgroundColor;
+
+  // width classes
+
+  .width-30 {
+    flex: 0 0 30%;
+  }
+
+  .width-40 {
+    flex: 0 0 40%;
+  }
+
+  .width-50 {
+    flex: 0 0 50%;
+  }
+
+  .width-60 {
+    flex: 0 0 60%;
+  }
+
+  // Start Wrapper
+
+  .wrapper {
+    height: 100vh;
+    width: 100vw;
+
+    // Start Header
+    .header {
+      width: 100%;
+
+      img {
+        padding: 40px 100px 5px 60px;
+      }
+    }
+
+    // Start Content
+    .tabs-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      ul.tabs {
+        padding: 0px 80px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        list-style: none;
+        z-index: 99;
+        margin-bottom: 25px;
+        transition: 0.3s ease-in-out all;
+        font-family: "CorporateS-Regular";
+
+        li {
+          background: transparent;
+          color: rgb(255, 255, 255);
+          display: inline-block;
+          padding: 0px 15px 10px 0px;
+          cursor: pointer;
+          text-align: center;
+
+          img {
+            max-height: 50px;
+            display: block;
+            margin: 10px auto;
+          }
+        }
+
+        li.current {
+          transition: none;
+
+          ::after {
+            content: " ";
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 19px solid #242424;
+            display: block;
+            margin: 0 auto;
+            transform: translateY(18px);
+          }
+        }
+
+        li.current.postision_fixed {
+          transform: translateY(18px);
+        }
+
+        li.current.hidden {
+          ::after {
+            display: none !important;
+          }
+        }
+      }
+
+      .tab-content {
+        display: none;
+        background: #242424;
+        color: white;
+        // padding: 15px;
+        box-shadow: 1px 1px 9px -1px rgba(36, 36, 36, 1);
+
+        h1 {
+          font-family: "CorporateA-Regular";
+          font-weight: 400;
+          padding-top: 10px;
+          font-size: 26px;
+        }
+
+        p {
+          font-family: "CorporateS-Regular";
+          line-height: 19px;
+        }
+
+        .general-slides-flex-rules {
+          width: 100%;
+          padding: 0px 80px;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+        }
+
+        .left_tab_content {
+          height: 100%;
+          position: relative;
+
+          .tiers-buttons {
+            bottom: 0;
+            width: 100%;
+            padding-bottom: 15px;
+            padding-top: 30px;
+
+            a {
+              text-decoration: none;
+              padding: 9px 0px;
+              cursor: pointer;
+              font-weight: lighter;
+              margin-right: 1px;
+              display: inline-block;
+              font-family: "CorporateS-Regular";
+              font-size: 14px;
+              text-align: center;
+              border: none;
+              width: 32%;
+              border-radius: 2px;
+              color: white;
+              background-color: #23acee;
+            }
+          }
+        }
+
+        .lite-text {
+          font-family: "CorporateS-lite";
+        }
+
+        .right_tab_content {
+          img {
+            width: 100%;
+          }
+
+          p {
+            padding: 10px 15px;
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+
+        .platinum-slide {
+          display: none;
+
+          .left_tab_content {
+            padding: 0px 15px;
+
+            .extended-warranty {
+              font-weight: lighter;
+              letter-spacing: 1px;
+            }
+          }
+
+          .right_tab_content {
+            background-color: #161616;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+        }
+
+        .gold-slide {
+          display: none;
+
+          .left_tab_content {
+            .extended-warranty {
+              font-weight: lighter;
+              letter-spacing: 1px;
+            }
+          }
+
+          .right_tab_content {
+            background-color: #161616;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+        }
+
+        .silver-slide {
+          display: none;
+
+          .right_tab_content {
+            background-color: #161616;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+        }
+
+        .calculate-slide {
+          display: none;
+          font-family: "CorporateS-Regular";
+          
+          .left_tab_content {
+            .calculator-form {
+              margin-top: 20px;
+              
+
+              select {
+                display: block;
+                width: 90%;
+                background: transparent;
+                padding: 10px;
+                margin-bottom: 15px;
+                border-radius: 20px;
+                border: solid white 1px;
+                color: white;
+                -webkit-appearance: none;
+                appearance: none;
+
+                option {
+                  color: white;
+                  border: none;
+                  outline: none;
+                  width: 100px !important;
+                  background: rgba(36, 36, 36, 1);
+                }
+
+                :focus-visible {
+                  outline: none !important;
+                }
+              }
+            }
+          }
+          .right_tab_content {
+            background-color: #161616;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+
+          .calculator-result {
+            margin-top: 20px;
+            margin-left: 10%;
+
+            .price-title{
+               padding: 10px 0px;
+               background-color: black;
+               text-align: center;
+               display: inline-block;
+               width: 100%;
+               margin: 15px;
+            }
+
+            h6{
+               text-align: center;
+               font-size: 16px;
+            }
+            
+          }
+        }
+      }
+
+      .tab-content.current {
+        display: inherit;
+        height: 70%;
+        overflow: auto;
+      }
+    }
+
+    // Start Footer
+    .footer {
+      // position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      .mb-slogan {
+        padding: $innerPadding;
+
+        h2 {
+          color: $textColor;
+          font-weight: 400;
+        }
+      }
+
+      .mb-logo {
+        padding: 20px 100px 20px 60px;
+
+        img {
+          max-height: 80px;
+        }
+      }
+    }
+  }
+}
+
+// styles to apply on portrait scape
+
+@media only screen and (max-width: 700px) {
+  body .wrapper .tabs-wrapper ul.tabs {
+    padding: 0px;
+  }
+
+  body .wrapper .footer .mb-logo {
+    padding: 20px 30px 20px 60px;
+  }
+
+  body .wrapper .footer .mb-slogan {
+    padding: 40px 100px 40px 30px;
+  }
+  body .wrapper .tabs-wrapper .tab-content .left_tab_content .tiers-buttons {
+    position: initial;
+    margin-top: 20px;
+  }
+  body .wrapper .tabs-wrapper .tab-content .general-slides-flex-rules {
+    padding: 0px 25px;
+  }
+}
+
+// force landscape mode
+@media only screen and (orientation: portrait) {
+  .wrapper {
+    height: 100vw;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+@media only screen and (orientation: landscape) {
+  .wrapper {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}

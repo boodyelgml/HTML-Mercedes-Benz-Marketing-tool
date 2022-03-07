@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="manifest" href="manifest.json">
+   <!-- Website title -->
+   <title>Mercedes-Benz</title>
+
+   <!-- start styles -->
+   <link rel="stylesheet" href="scss/style.css">
+
+   <!-- start scripts -->
+   <script src="js/jquery.min.js"></script>
+
+
+   <script>
+      if ('serviceWorker' in navigator) {
+         var scope = `/`;
+         navigator.serviceWorker
+            .register("/service-worker.js", { scope })
+            .catch(err => {
+               console.log("error registering SW : ", err);
+            });
+      }
+   </script>
+
+</head>
+
+<body id="body">
+
+
+   <!-- start wrapper -->
+
+   <div class="wrapper">
+
+
+      <!-- start header -->
+
+      <div class="header">
+         <img src="images/logo.png" alt="">
+      </div>
+
+
+      <!-- start tabs -->
+
+      <div class="tabs-wrapper">
+
+         <ul class="tabs">
+
+            <li class="tab-link current" data-tab="tab-1" onclick="show_only_main_slide()">
+
+               <img src="images/protection plan.png" alt="">
+
+               <span>Protection Plan</span>
+
+            </li>
+
+            <li class="tab-link" data-tab="tab-2">
+
+               <img src="images/Extended Warranty_1.png" alt="">
+
+               <span>Extended Warranty</span>
+
+            </li>
+
+            <li class="tab-link" data-tab="tab-3">
+
+               <img src="images/service contract.png" alt="">
+
+               <span>Service Contract</span>
+
+            </li>
+
+            <li class="tab-link" data-tab="tab-4">
+
+               <img src="images/door to door.png" alt="">
+
+               <span>Door-To-Door Service</span>
+
+            </li>
+
+            <li class="tab-link" data-tab="tab-5">
+
+               <img src="images/nano ceramic protection.png" alt="">
+
+               <span>Nano Ceramic Protection</span>
+
+            </li>
+
+         </ul>
+
+         <div id="tab-1" class="tab-content current">
+
+            <div class="main-slide general-slides-flex-rules">
+
+               <div class="left_tab_content width-60">
+
+
+                  <!-- main slide -->
+
+                  <h1 style="padding-right: 45px;">
+                     You invested in Mercedes-Benz. Now we have your back.
+                  </h1>
+
+                  <br>
+
+                  <p style="padding-right: 45px;">
+                     With Abou Ghaly Motors Mercedes-Benz protection plan tiers, you have the flexibility to
+                     choose
+                     your level of cover, whilst ensuring your vehicle is restored with absolute care and
+                     expertise.
+                  </p>
+
+                  <div class="tiers-buttons">
+
+                     <a class="toggle-slides-button" onclick="show_only_platinum_slide()">Platinum</a>
+                     <a class="toggle-slides-button" onclick="show_only_gold_slide()">Gold</a>
+                     <a class="toggle-slides-button" onclick="show_only_silver_slide()">Silver</a>
+                     <a class="toggle-slides-button" onclick="show_only_calculate_slide()">Calculate</a>
+
+                  </div>
+
+                  <style>
+                     #tab-1 .left_tab_content .tiers-buttons a.toggle-slides-button {
+                        width: 23%;
+                     }
+                  </style>
+
+               </div>
+
+
+
+               <div class="right_tab_content width-40">
+
+                  <img src="images/Asset 1.png" alt="">
+
+               </div>
+
+            </div>
+
+
+            <!-- platinum-slide -->
+            <div class="platinum-slide general-slides-flex-rules">
+
+               <div class="left_tab_content width-50">
+
+                  <img src="images/platinum.png" alt="" style="padding-top: 10px; margin-bottom: 60px;">
+
+                  <h2 class="extended-warranty">Extended Warranty or Service Contract</h2>
+
+                  <div class="tiers-buttons">
+
+                     <a href="https://bit.ly/3v1zxG6" target="_blank">Request Estimate</a>
+
+                     <a onclick="show_only_main_slide()">Back</a>
+
+                  </div>
+
+               </div>
+
+
+               <div class="right_tab_content width-50">
+
+                  <p>
+                  <ul style="padding:0px 25px;">
+                     <li>25% Discount on a full Nano ceramic coating for the external body.</li>
+                     <li>25% Discount on windshield film protection.</li>
+                     <li>15% discount on SIXT rent a car.</li>
+                     <li>10% discount on London Cab on the second leg.</li>
+                     <li>7% discount on car accessories.</li>
+                     <li>Fixed discounts on all service invoices ‘%10 on labor fees and %5 on parts’ during the
+                        protection
+                        coverage.</li>
+                     <li>Free 2 London Cab trips.</li>
+                     <li>Free door-to-door service twice/year.</li>
+                     <li>Replacement car from SIXT for 2 days in case of accident.</li>
+                     <li>Free car polish and car care once/ year.</li>
+                     <li>Free pick-up truck in case of accident twice/year.</li>
+                     <br>
+                     <li style="direction: rtl; text-align: right;">ويغطى التامين على السيارة بدون سداد العميل لاية
+                        تحملات على الوثيقة بخلاف تحملات الايرباج وفتحة
+                        السقف والانوار الزينون</li>
+
+                  </ul>
+
+
+
+                  </p>
+
+               </div>
+
+            </div>
+
+            <!-- gold-slide -->
+            <div class="gold-slide general-slides-flex-rules">
+
+               <div class="left_tab_content width-50">
+
+                  <img src="images/gold.png" alt="" style="padding-top: 10px; margin-bottom: 60px;">
+
+                  <h2 class="extended-warranty">Extended Warranty or Service Contract</h2>
+
+                  <div class="tiers-buttons">
+
+                     <a href="https://bit.ly/3v1zxG6" target="_blank">Request Estimate</a>
+
+                     <a onclick="show_only_main_slide()">Back</a>
+
+                  </div>
+
+               </div>
+
+               <div class="right_tab_content width-50">
+
+                  <p>
+                  <ul style="padding:0px 25px;">
+                     <li>25% Discount on a full Nano ceramic coating for the external body.</li>
+                     <li>10% discount on SIXT rent a car.</li>
+                     <li>10% discount on London Cab on the second leg.</li>
+                     <li>5% discount on MB accessories.</li>
+                     <li>Free pick-up truck in case of accident twice/year.</li>
+                     <li>Free car polish and car care every year.</li>
+                     <br>
+                     <li style="direction: rtl; text-align: right;">ويغطى التامين على السيارة مع سداد العميل فقط للتحمل
+                        الاجبارى واستهلاكات قطع الغيار ولا يتحمل
+                        خصم الإصلاح في التوكيل اول 5 سنوات</li>
+                  </ul>
+
+
+                  </p>
+
+
+
+               </div>
+
+            </div>
+
+            <!-- silver-slide -->
+            <div class="silver-slide general-slides-flex-rules">
+
+
+               <div class="left_tab_content width-50">
+
+                  <img src="images/silver.png" alt="" style="padding-top: 10px; margin-bottom: 60px;">
+
+
+                  <div class="tiers-buttons">
+
+                     <a href="https://bit.ly/3v1zxG6" target="_blank">Request Estimate</a>
+
+                     <a onclick="show_only_main_slide()">Back</a>
+
+                  </div>
+
+               </div>
+
+               <div class="right_tab_content width-50">
+
+                  <p>
+                  <ul style="padding:0px 25px;">
+                     <li>10% discount on SIXT rent a car.</li>
+                     <li>10% discount on London Cab on the second leg.</li>
+                     <li>5% discount on MB accessories.</li>
+                     <li>Free pick-up truck in case of accident twice/year.</li>
+                     <br>
+                     <li style="direction: rtl; text-align: right;">ويغطى التامين على السيارة مع سداد العميل لكافة
+                        التحملات على الوثيقة (التحمل الاجبارى وخصم الإصلاح
+                        في التوكيل واستهلاكات قطع الغيار )</li>
+                  </ul>
+
+                  </p>
+
+
+
+               </div>
+
+            </div>
+
+
+            <!-- calculate slide -->
+            <div class="calculate-slide general-slides-flex-rules">
+
+
+               <div class="left_tab_content width-50" style="border-right: 1px solid #ffffff26;">
+
+                  <div class="calculator-form">
+                     <form>
+
+                        <label for="" style="padding-left: 10px;">CLASS, MODEL, PACKAGE</label>
+
+                        <div class="select-wrapper" style="margin-top: 5px;">
+                           <select name="car-class" id="car-class">
+                              <option value="" selected disabled>Select Class</option>
+                              <option value="">class 1</option>
+                              <option value="">class 2</option>
+                           </select>
+                        </div>
+
+                        <div class="select-wrapper">
+                           <select name="car-model" id="car-model">
+                              <option value="" selected disabled>Select Model</option>
+                              <option value="">model 1</option>
+                              <option value="">model 2</option>
+                           </select>
+                        </div>
+
+                        <div class="select-wrapper">
+                           <select name="car-package" id="car-package">
+                              <option value="" selected disabled>Select Package</option>
+                              <option value="">package 1</option>
+                              <option value="">package 2</option>
+                           </select>
+                        </div>
+
+                        <div class="toggle-radio">
+
+                           <input type="radio" name="type" id="NO-METALLIC" checked/>
+                           <label for="NO-METALLIC">Choice A</label>
+
+                           <input type="radio" name="type" id="METALLIC" />
+                           <label for="METALLIC">METALLIC</label>
+
+                        </div>
+
+                        
+                        <div class="toggle-radio">
+
+                        <input type="radio" name="type" id="DESIGNO" />
+                        <label for="DESIGNO">DESIGNO</label>
+
+                        <input type="radio" name="type" id="DESIGNO-MAGNO" />
+                        <label for="DESIGNO-MAGNO">DESIGNO-MAGNO</label>
+
+                        </div>
+
+                     </form>
+
+                     <style>
+                        .select-wrapper {
+                           position: relative;
+                        }
+
+                        .select-wrapper::after {
+                           content: "▼";
+                           font-size: 11px;
+                           top: 13px;
+                           right: 13%;
+                           position: absolute;
+                        }
+
+                        /* old IE gets regular radios */
+                        .toggle-radio {
+                           width: 90%;
+                           display: flex;
+                           flex-direction: row;
+                           flex-wrap: no-wrap;
+                           justify-content: space-between;
+                        }
+
+                        .toggle-radio label {
+                           display: inline-block;
+                           width: 45%;
+                           text-align: center;
+                           background: transparent;
+                           padding: 10px;
+                           margin-bottom: 15px;
+                           border-radius: 20px;
+                           border: solid white 1px;
+                           font-size: 14px;
+                        }
+
+                        .toggle-radio label:hover {
+                           cursor: pointer;
+                           background: #d3d3d3;
+                        }
+ 
+
+                        .toggle-radio [type="radio"] {
+                           display: none;
+                        }
+ 
+
+                        .toggle-radio [type="radio"]:checked+label {
+                           background: white;
+                           color: black;
+                        }
+                     </style>
+                  </div>
+
+                  <div class="tiers-buttons" style="padding-top: 0;">
+
+                     <a style="width: 90%; border-radius: 15px; padding: 10px 0px;">Show Plan</a>
+
+                  </div>
+
+               </div>
+
+               <div class="width-50">
+
+                  <div class="calculator-result">
+
+                     <h2 class="price">0 EGP</h2>
+                     
+                     <span class="price-title">Insurance rate 3%</span>
+                     <h6>0 LE</h6>
+                     
+                     
+                     <span class="price-title">Insurance rate 3.5%</span>
+                     <h6>0 LE</h6>
+                     
+                     
+                     <span class="price-title">Insurance rate 4%</span>
+                     <h6>0 LE</h6>
+                  </div>
+                  
+
+               </div>
+
+            </div>
+
+         </div>
+
+
+         <div id="tab-2" class="tab-content">
+
+            <div class="general-slides-flex-rules">
+
+               <div class="left_tab_content width-60">
+
+
+                  <!-- main slide -->
+
+                  <h1>
+                     A Coverage You Can Trust
+                  </h1>
+
+
+                  <br>
+
+                  <p style="max-width: 80%;">
+                     With an Extended Limited Warranty up to 3 years <br>
+                     Our extended warranty covers a wide range of your Mercedes-Benz components and offers a claim limit
+                     equal to your car's current market value, helping to protect you from the unexpected costs that may
+                     occur from a mechanical or electrical failure.
+                  </p>
+
+                  <div class="tiers-buttons">
+
+                     <a href="https://bit.ly/3v1zxG6" target="_blank">Discover More</a>
+
+                  </div>
+
+
+               </div>
+
+
+
+               <div class="right_tab_content width-40">
+
+                  <img src="images/Asset 2.png" alt="" style="padding-top: 15px;">
+
+               </div>
+
+            </div>
+
+         </div>
+
+
+         <div id="tab-3" class="tab-content">
+
+            <div class="general-slides-flex-rules">
+
+               <div class="left_tab_content width-60">
+
+
+                  <!-- main slide -->
+
+                  <h1>
+                     There are more important things in life to concern yourself with than car servicing.
+                  </h1>
+
+                  <br>
+
+                  <p style="max-width: 80%;">
+
+                     That’s why Abou Ghaly Motors Mercedes-Benz offers Service Contracts with fixed service package to
+                     suit you and your Mercedes-benz perfectly.
+                     Enjoy the hassle-free and benefit from the high service quality, you will entrust your car to the
+                     hands of exceptionally well trained experts and you will ensure that only Mercedes-Benz Genuine
+                     Parts are used.
+
+                  </p>
+
+                  <div class="tiers-buttons">
+
+                     <a href="https://bit.ly/3v1zxG6" target="_blank">Discover More</a>
+
+                  </div>
+
+
+               </div>
+
+
+
+               <div class="right_tab_content width-40">
+
+                  <img src="images/Asset 3.png" alt="">
+
+               </div>
+
+            </div>
+
+         </div>
+
+
+         <div id="tab-4" class="tab-content">
+
+            <div class="general-slides-flex-rules">
+
+               <div class="left_tab_content width-60">
+
+
+                  <!-- main slide -->
+
+                  <h1>
+                     Total Convenience. Absolute Ease.
+                  </h1>
+
+                  <br>
+
+                  <p style="max-width: 80%; font-size: 15px;">
+
+                     With Abou Ghaly Motors Mercedes-Benz Door-to-Door* Service, all you need to do is just contact
+                     15454 to fix an appointment with us to pick up / deliver your Mercedes-Benz at your door step. <br>
+                     <br>
+
+                  <h3> Cairo:</h3>
+                  Twice door-to-door service <img src="images/arrow.png" alt=""> 2,000K <br>
+                  Three times door-to-door service <img src="images/arrow.png" alt=""> 3,000k <br> <br>
+
+                  <h3>Giza:</h3>
+                  Twice door-to-door service <img src="images/arrow.png" alt=""> 2,500k <br>
+                  Three times door-to-door service <img src="images/arrow.png" alt=""> 3,500k <br>
+
+                  </p>
+
+                  <div class="tiers-buttons">
+
+                     <a href="https://bit.ly/3v1zxG6" target="_blank">Discover More</a>
+
+                  </div>
+
+
+               </div>
+
+
+
+               <div class="right_tab_content width-40">
+
+                  <img src="images/Asset 4.png" alt="">
+
+               </div>
+
+            </div>
+
+         </div>
+
+
+         <div id="tab-5" class="tab-content">
+
+            <div class="general-slides-flex-rules">
+
+               <div class="left_tab_content width-50">
+
+
+                  <!-- main slide -->
+
+                  <h1>
+                     The New Generation of <br> Protective Coating
+                  </h1>
+
+                  <br>
+
+                  <p style="max-width: 80%; font-size: 15px;">
+
+                     Nano Ceramic Coating Protects paint from chips, dust, acid rain, paint transfer, rust,
+                     fading, and water streaks by using Mercedes-Benz genuine products.
+
+                     <br>
+                     <br>
+
+                     Tier 1: A-Class, B-Class, C-Class, E-Class, CLA and GLA <br>
+                     Tier 2: G-Class, GLE, GLS <br>
+                     Tier 3: S-Class, CLS, V-Class <br>
+
+                  </p>
+
+                  <div class="tiers-buttons">
+
+                     <a href="https://bit.ly/3v1zxG6" target="_blank">Discover More</a>
+
+                  </div>
+
+
+               </div>
+
+               <div class="right_tab_content width-50" style="background-color: #161616;">
+
+                  <table>
+                     <tr>
+                        <th>Tiers</th>
+                        <th>Exterior</th>
+                        <th>interior</th>
+                        <th>Full vehicle</th>
+                     </tr>
+                     <tr>
+                        <td>tier 1</td>
+                        <td>12,000</td>
+                        <td>6,000</td>
+                        <td>18,000</td>
+                     </tr>
+                     <tr>
+                        <td>tier 2</td>
+                        <td>14,000</td>
+                        <td>6,000</td>
+                        <td>20,000</td>
+                     </tr>
+                     <tr>
+                        <td>tier 3</td>
+                        <td>16,000</td>
+                        <td>7,000</td>
+                        <td>23,000</td>
+                     </tr>
+
+                  </table>
+
+                  <style>
+                     table,
+                     td,
+                     th {
+                        border: 1px solid white;
+                        text-align: center;
+                        padding: 15px;
+                     }
+
+                     table {
+                        width: -webkit-fill-available;
+                        border-collapse: collapse;
+                        margin: 20px;
+                     }
+                  </style>
+
+               </div>
+
+            </div>
+
+         </div>
+
+      </div>
+
+
+      <!-- start footer -->
+
+      <div class="footer">
+
+         <div class="mb-slogan">
+            <h2>Mercedes-Benz</h2>
+         </div>
+
+         <div class="mb-logo">
+            <img src="images/mb-logo.png" alt="">
+         </div>
+
+      </div>
+
+   </div>
+
+
+
+   <script>
+      $(document).ready(function () {
+
+
+         // tabs init 
+         $('ul.tabs li').click(function () {
+
+            var tab_id = $(this).attr('data-tab');
+
+            $('ul.tabs li').removeClass('current');
+
+            $('.tab-content').removeClass('current');
+
+            $(this).addClass('current');
+
+            $("#" + tab_id).addClass('current');
+
+         })
+
+
+
+         // set tabs wrapper height 
+         // $(".tabs-wrapper").height(
+
+         //    $(window).height() - ($(".header").height() + $(".footer").height())
+
+         // ) 
+
+
+         // // when resizing window 
+         // $(window).on('resize', function () {
+
+         //    var full_window_height = $(window).height();
+
+         //    var header_height = $(".header").height();
+
+         //    var footer_height = $(".footer").height();
+
+
+         //    $(".tabs-wrapper").height(
+
+         //       full_window_height - (header_height + footer_height)
+
+         //    )
+
+         // })
+
+
+         //hide all tabs content by default 
+         var active_tab_content = $("body .wrapper .tabs-wrapper .tab-content");
+
+         // hide  content     
+         active_tab_content.animate({ opacity: '0' }, 100);
+
+         // hide the rectangle
+         $("body .wrapper .tabs-wrapper ul.tabs li.current").addClass("hidden")
+
+         // center tabs vertically
+         $(".tabs").css("transform", "translateY(25vh)")
+
+
+
+         // show content when click on any tab for first time handler
+
+         $("body .wrapper .tabs-wrapper ul.tabs li").one("click", function () {
+
+            // show content 
+            active_tab_content.animate({ opacity: '1' }, 200);
+
+            // show the rectangle
+            $("body .wrapper .tabs-wrapper ul.tabs li.current").removeClass("hidden")
+
+            // fix active tab position
+            $("body .wrapper .tabs-wrapper ul.tabs li.current").addClass("postision_fixed")
+
+            //tabs to top 
+            $(".tabs").css("transform", "translateY(0vh)")
+
+         })
+
+
+
+      })
+
+
+
+      // start slides switcher
+
+      var main_slide = $(".main-slide");
+      var platinum_slide = $(".platinum-slide");
+      var gold_slide = $(".gold-slide");
+      var silver_slide = $(".silver-slide");
+      var calculate_slide = $(".calculate-slide");
+
+      function show_only_main_slide() {
+
+         //hide all slides
+         platinum_slide.css("display", 'none');
+         gold_slide.css("display", 'none');
+         silver_slide.css("display", 'none');
+         calculate_slide.css("display", 'none');
+
+         //show main slide
+         main_slide.css("display", 'flex');
+
+      }
+
+      function show_only_platinum_slide() {
+
+         //hide all slides
+         main_slide.css("display", 'none');
+         gold_slide.css("display", 'none');
+         silver_slide.css("display", 'none');
+         calculate_slide.css("display", 'none');
+
+         //show platinum slide
+         platinum_slide.css("display", 'flex');
+
+      }
+
+      function show_only_gold_slide() {
+
+         //hide all slides
+         main_slide.css("display", 'none');
+         platinum_slide.css("display", 'none');
+         silver_slide.css("display", 'none');
+         calculate_slide.css("display", 'none');
+
+         //show gold slide
+         gold_slide.css("display", 'flex');
+
+      }
+
+      function show_only_silver_slide() {
+
+         //hide all slides
+         main_slide.css("display", 'none');
+         platinum_slide.css("display", 'none');
+         gold_slide.css("display", 'none');
+         calculate_slide.css("display", 'none');
+
+         //show silver slide
+         silver_slide.css("display", 'flex');
+
+      }
+
+
+      function show_only_calculate_slide() {
+
+         //hide all slides
+         main_slide.css("display", 'none');
+         platinum_slide.css("display", 'none');
+         gold_slide.css("display", 'none');
+         silver_slide.css("display", 'none');
+
+         //show silver slide
+         calculate_slide.css("display", 'flex');
+
+      }
+   </script>
+
+</body>
+
+</html>

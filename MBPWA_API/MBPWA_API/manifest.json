@@ -1,0 +1,16 @@
+{
+  "name": "Mercedes Benz",
+  "short_name": "MB-PWA",
+  "scope": "/",
+  "start_url": "Home/Index",
+  "icons": [
+    {
+      "src": "/Assets/images/small-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#242424",
+  "background_color": "#000",
+  "display": "standalone"
+}
